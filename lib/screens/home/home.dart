@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
         iconTheme: IconThemeData(color: Color(0xff35C8F6)),
         elevation: 0.0,
         title: Text(
-          "O-8",
+          "O2 - Keeper",
           style: GoogleFonts.rakkas(
             color: Color(0xff35C8F6),
           ),
@@ -218,7 +218,7 @@ class _HomeState extends State<Home> {
                             )),
                           ),
                       child: Text(
-                        '$latitude',
+                        'YOUR CURRENT LOCATION IS ${currentAddress.toUpperCase()}',
                         style: GoogleFonts.rakkas(color: Colors.green),
                       )),
                 (d1.isNotEmpty)

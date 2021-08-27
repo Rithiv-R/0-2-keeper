@@ -1,7 +1,5 @@
-import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:http/http.dart' as http;
 import 'package:oxykeeper/models/oxymodels.dart';
 import 'package:share/share.dart';
 
@@ -49,22 +47,26 @@ class _AddressFinderState extends State<AddressFinder> {
   }*/
 
   fetchData() async {
-    http.Response response =
-        await http.get(Uri.parse('https://oxypro.herokuapp.com/oxyfind/'));
-    setState(() {
-      List temp = json.decode(response.body);
-      temp.forEach((element) {
-        if (element['district'] == currentAddress) {
-          oxymodel ox = oxymodel(
-            district: element['district'],
-            groupname: element['groupname'],
-            name_of_supplier: element['name_of_supplier'],
-            phone_number: element['phone_number'],
-          );
-          mode.add(ox);
-        }
+    try {
+      FirebaseFirestore.instance
+          .collection('${widget.d1}')
+          .get()
+          .then((QuerySnapshot querySnapshot) {
+        querySnapshot.docs.forEach((element) {
+          setState(() {
+            oxymodel ox = oxymodel(
+              district: element['district'],
+              groupname: element['group_name'],
+              name_of_supplier: element['name_of_supplier'],
+              phone_number: element['phone_number'],
+            );
+            mode.add(ox);
+          });
+        });
       });
-    });
+    } catch (e) {
+      print(e);
+    }
   }
 
   Widget Tile(
