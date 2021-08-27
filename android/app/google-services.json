@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130010457093",
+    "project_id": "god-phoenix-5adb0",
+    "storage_bucket": "god-phoenix-5adb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130010457093:android:23ef8ca6901d519e10686c",
+        "android_client_info": {
+          "package_name": "com.rithiv.oxykeeper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130010457093-2mb8lh0v1ked24b0g7n8hkbb2d377iuq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFEic1vGLT93Qtvvd2l_b9oncTZxvPDo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130010457093-2mb8lh0v1ked24b0g7n8hkbb2d377iuq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
