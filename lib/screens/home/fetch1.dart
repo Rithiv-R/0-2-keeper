@@ -1,8 +1,5 @@
-import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:http/http.dart' as http;
 import 'package:oxykeeper/models/oxymodels.dart';
 import 'package:share/share.dart';
 
@@ -30,14 +27,14 @@ class _AddressFinderState extends State<AddressFinder3> {
   fetchData() async {
     try {
       FirebaseFirestore.instance
-          .collection('users')
+          .collection('${widget.currentAddress}')
           .get()
           .then((QuerySnapshot querySnapshot) {
         querySnapshot.docs.forEach((element) {
           setState(() {
             oxymodel ox = oxymodel(
               district: element['district'],
-              groupname: element['group name'],
+              groupname: element['group_name'],
               name_of_supplier: element['name_of_supplier'],
               phone_number: element['phone_number'],
             );

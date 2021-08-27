@@ -20,7 +20,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   late double latitude;
   late double longitude;
-  late String currentAddress;
+  late String currentAddress = "";
   var object = [];
   late CameraPosition _kGooglePlex =
       CameraPosition(target: LatLng(36.67, -87.78), zoom: 14.4746);
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       drawer: MenuBar(),
-      body: onmapcreated == null && addMarker == null
+      body: (currentAddress.isEmpty)
           ? Center(
               child: CircularProgressIndicator(),
             )
@@ -228,7 +228,7 @@ class _HomeState extends State<Home> {
                         d1: d1,
                       )
                     : AddressFinder3(
-                        currentAddress: 'Chennai',
+                        currentAddress: currentAddress,
                       ),
               ],
             ),
