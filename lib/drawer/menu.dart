@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:oxykeeper/screens/home/home.dart';
+import 'package:oxykeeper/screens/states/display.dart';
 import 'package:oxykeeper/webview.dart';
 
 class MenuBar extends StatefulWidget {
@@ -33,10 +34,13 @@ class _MenuBarState extends State<MenuBar> {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StateClass()));
+              },
               child: ButtonTile(
-                icon: Icons.money_outlined,
-                text: 'DONATION',
+                icon: Icons.star_outline,
+                text: 'StatewiseView',
               ),
             ),
           ],

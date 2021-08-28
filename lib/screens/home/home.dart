@@ -125,8 +125,8 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         actions: [
           FlatButton.icon(
-              onPressed: () async {
-                await _auth.signOut();
+              onPressed: () {
+                Navigator.pop(context);
               },
               icon: Icon(
                 Icons.logout,
