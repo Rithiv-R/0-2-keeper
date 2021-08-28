@@ -1,22 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:oxykeeper/maps/reqassistant.dart';
 import 'package:oxykeeper/models/oxymodels.dart';
+import 'package:oxykeeper/screens/home/home.dart';
 import 'package:share/share.dart';
 
 // ignore: must_be_immutable
 class AddressFinder3 extends StatefulWidget {
   String currentAddress;
-  AddressFinder3({required this.currentAddress});
+  double latitude;
+  double longitude;
+  AddressFinder3(
+      {required this.currentAddress,
+      required this.latitude,
+      required this.longitude});
   @override
   _AddressFinderState createState() => _AddressFinderState();
 }
 
 class _AddressFinderState extends State<AddressFinder3> {
-  late String x;
+  late var x;
   List<oxymodel> mode = [];
   void initState() {
     trio();
-    x = this.widget.currentAddress;
+    x = this.widget.latitude;
     super.initState();
   }
 
@@ -37,6 +45,8 @@ class _AddressFinderState extends State<AddressFinder3> {
               groupname: element['group_name'],
               name_of_supplier: element['name_of_supplier'],
               phone_number: element['phone_number'],
+              latitude: element['latitude'],
+              longitude: element['longitude'],
             );
             mode.add(ox);
           });
@@ -98,15 +108,35 @@ class _AddressFinderState extends State<AddressFinder3> {
             shrinkWrap: true,
             physics: const AlwaysScrollableScrollPhysics(),
             itemCount: mode.length,
-            itemBuilder: (context, index) => Container(
-              child: Card(
-                child: Tile(
-                  text: mode[index].groupname,
-                  name: mode[index].name_of_supplier,
-                  phno: mode[index].phone_number,
-                  district: mode[index].district,
+            itemBuilder: (context, index) => Column(
+              children: <Widget>[
+                GestureDetector(
+                  child: Container(
+                    child: Card(
+                      child: Tile(
+                        text: mode[index].groupname,
+                        name: mode[index].name_of_supplier,
+                        phno: mode[index].phone_number,
+                        district: mode[index].district,
+                      ),
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => MyMap(
+                          source: LatLng(widget.latitude, widget.longitude),
+                          destination: LatLng(
+                            mode[index].latitude,
+                            mode[index].longitude,
+                          ),
+                          groupname: mode[index].groupname,
+                        ),
+                      ),
+                    );
+                  },
                 ),
-              ),
+              ],
             ),
           ));
   }

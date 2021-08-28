@@ -229,6 +229,8 @@ class _HomeState extends State<Home> {
                       )
                     : AddressFinder3(
                         currentAddress: currentAddress,
+                        latitude: latitude,
+                        longitude: longitude,
                       ),
               ],
             ),
