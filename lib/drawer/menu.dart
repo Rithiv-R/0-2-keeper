@@ -75,7 +75,7 @@ class _MenuBarState extends State<MenuBar> {
       child: Column(
         children: <Widget>[
           Padding(padding: EdgeInsets.only(top: 20)),
-          Text('O-8',
+          Text('O-2 Keeper',
               style: GoogleFonts.rakkas(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
