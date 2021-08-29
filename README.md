@@ -27,9 +27,6 @@ dependencies:
   geolocator: ^7.4.0
   flutter_launcher_icons: ^0.9.1
 
-
->>>>>>> eed806f1f8b29b485c7f7e2e329588aee5c2fbb5
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
