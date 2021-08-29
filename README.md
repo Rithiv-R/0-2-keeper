@@ -1,6 +1,27 @@
 # O2 - Keeper
 
-A new Flutter project.
+Project Statement: To demonstrate a project based on Mobile app which would help in oxygen crisis
+
+# Depndencies used
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_auth: "^3.0.2"
+  cloud_firestore: "^2.5.0"
+  firebase_core: "^1.5.0"
+  google_fonts: ^2.1.0
+  provider: ^5.0.0
+  cupertino_icons: ^1.0.2
+  share: ^2.0.4
+  http: ^0.13.3
+  location: ^4.3.0
+  google_maps_flutter: ^2.0.6
+  geocoding: ^2.0.1
+  geolocator: ^7.4.0
+  flutter_launcher_icons: ^0.9.1
+
+
 
 ## Getting Started
 
