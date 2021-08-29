@@ -8,6 +8,70 @@ Project Statement: To demonstrate a project based on Mobile app which would help
 
     During that situation we got help from most of volunteers.  This basically gives you the details of the oxygen vendors who is nearby and it also gives you an opportunity to look over Oxygen vendors details in State wise and district wise in India. Even if the third wave of Covid-19 comes too, I hope that this app would be useful in future if there was unexpected crisis of Oxygen. The complete details for this project details mentioned in the upcoming slides
 
+
+## Screenshots
+
+## welcome screen
+
+![Welcome](outcome/welcomescrren.jpeg)
+
+## sign up screen
+
+![sign up](outcome/signupscreen.jpeg)
+
+## login in screen
+
+![sign up](outcome/loginscreen.jpeg)
+
+##  Home
+
+![oxygen vendors near me](outcome/vendors_near.jpeg)
+
+##  Vendor markers near by
+
+![Markers](outcome/Markers.jpeg)
+
+## imporved version
+
+![Improved Version](outcome/imp.jpeg)
+
+## Searching
+
+![Chennai](outcome/Search2.jpeg)
+
+![Coimbatore](outcome/Search1.jpeg)
+
+## State View
+
+![State View](outcome/States_View.jpeg)
+
+## TamilNadu districts
+
+![TN](outcome/Tn1.jpeg)
+
+![TN](outcome/Tn2.jpeg)
+
+![TN](outcome/Tn3.jpeg)
+
+## Gujarat districts
+
+![GJ](outcome/GJ1.jpeg)
+
+![GJ](outcome/GJ2.jpeg)
+
+![GJ](outcome/G3.jpeg)
+
+![GJ](outcome/G4.jpeg)
+
+## Display district view
+
+![TN](outcome/D1.jpeg)
+
+![TN](outcome/D2.jpeg)
+
+![TN](outcome/D3.jpeg)
+
+
 # Depndencies used
 
 dependencies:
